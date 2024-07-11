@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Navbar from "./components/Navbar/index";
+import ProductsList from "./pages/ProductsList";
+import ProductDetails from "./pages/ProductDetails/index";
 function App() {
   return (
     <>
@@ -12,7 +14,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<div>404, not found</div>} />
+        <Route path="/products" element={<ProductsList />} />
+        <Route path="/products/:productID" element={<ProductDetails />} />
+        {/* <Route path="*" element={<div>404, not found</div>} /> */}
       </Routes>
     </>
   );
